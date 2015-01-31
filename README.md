@@ -1,0 +1,2638 @@
+Reference
+
+https://gist.github.com/frieder/0563ab8a26cd7d808bb3
+
+To include dependencies for Adobe Experience Manager 6 (AEM6) one can use one of the following
+approaches.
+
+a) Use a single dependency that will include other dependencies through transitive dependencies.
+   Please note that unlike the 2nd approach this approach will not include all dependencies.
+
+<dependency>
+    <groupId>com.adobe.aem</groupId>
+    <artifactId>aem-api</artifactId>
+    <version>6.0.0.1</version>
+    <scope>provided</scope>
+</dependency>
+
+b) Include the Maven dependencies for each bundle that comes with AEM6 OOTB explicitly.
+   * At the end one can find some quick&dirty Java code to generate such a list.
+
+<dependency>
+    <groupId>com.adobe.aemds.formsmanager</groupId>
+    <artifactId>adobe-aemds-formsanddocuments-core</artifactId>
+    <version>3.0.64</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.aemds.guide</groupId>
+    <artifactId>aemds-guide-core</artifactId>
+    <version>1.0.58</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>com.adobe.cq.projects.api</artifactId>
+    <version>0.0.14</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>com.adobe.cq.projects.core</artifactId>
+    <version>0.0.84</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>com.adobe.cq.projects.ui</artifactId>
+    <version>0.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>com.adobe.cq.projects.wcm.core</artifactId>
+    <version>0.0.18</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>cq-address</artifactId>
+    <version>1.0.12</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>cq-content-insight</artifactId>
+    <version>1.0.24</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>cq-dam-mac-sync</artifactId>
+    <version>1.0.10</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>cq-dam-mac-sync-helper</artifactId>
+    <version>1.0.20</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>cq-dashboards</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>cq-dms-tagmanager</artifactId>
+    <version>5.7.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>cq-dtm</artifactId>
+    <version>0.0.20</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>cq-gfx</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>cq-healthcheck</artifactId>
+    <version>1.0.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>cq-history</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>cq-launches-api</artifactId>
+    <version>5.7.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>cq-pre-upgrade-backup</artifactId>
+    <version>6.0.12</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>cq-scheduled-exporter</artifactId>
+    <version>5.7.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>cq-security-hc</artifactId>
+    <version>1.0.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq</groupId>
+    <artifactId>search-collections</artifactId>
+    <version>0.0.42</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.cq.aam</groupId>
+    <artifactId>cq-audiencemanager</artifactId>
+    <version>1.1.6</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.cq.commerce</groupId>
+    <artifactId>cq-commerce-core</artifactId>
+    <version>5.8.48</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.commerce</groupId>
+    <artifactId>cq-commerce-pim</artifactId>
+    <version>5.8.44</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.cq.dam</groupId>
+    <artifactId>cq-scene7-imaging</artifactId>
+    <version>1.0.48</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.cq.media</groupId>
+    <artifactId>cq-media-articles</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.media</groupId>
+    <artifactId>cq-media-publishing-dps-fp-api</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.media</groupId>
+    <artifactId>cq-media-publishing-dps-fp-core</artifactId>
+    <version>5.7.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.media</groupId>
+    <artifactId>cq-media-publishing-dps-integration</artifactId>
+    <version>5.7.12</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.cq.mobile</groupId>
+    <artifactId>cq-mobile-phonegap-wcm-core</artifactId>
+    <version>6.0.48</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.cq.sightly</groupId>
+    <artifactId>cq-wcm-sightly-extension</artifactId>
+    <version>1.1.18</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-as-provider</artifactId>
+    <version>1.0.12</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-blog</artifactId>
+    <version>1.1.7</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-calendar</artifactId>
+    <version>1.1.33</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-commons</artifactId>
+    <version>1.4.144</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-commons-oauth</artifactId>
+    <version>1.0.17</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-forum</artifactId>
+    <version>1.3.79</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-group</artifactId>
+    <version>1.1.7</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-handlebars</artifactId>
+    <version>1.0.21</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-journal</artifactId>
+    <version>1.1.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-messaging</artifactId>
+    <version>1.1.34</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-moderation</artifactId>
+    <version>1.0.19</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-qna</artifactId>
+    <version>1.2.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-review</artifactId>
+    <version>1.1.37</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-scoring</artifactId>
+    <version>1.0.11</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-storage</artifactId>
+    <version>1.0.20</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-tally</artifactId>
+    <version>1.1.35</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-translation</artifactId>
+    <version>1.0.48</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-ugc-search-collections</artifactId>
+    <version>1.1.36</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.cq.social</groupId>
+    <artifactId>cq-social-ugcbase</artifactId>
+    <version>1.1.33</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.cq.wcm</groupId>
+    <artifactId>cq-wcm-launches-core</artifactId>
+    <version>5.8.8</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.activitystreams</artifactId>
+    <version>0.0.38</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.asset.api</artifactId>
+    <version>2.0.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.asset.core</artifactId>
+    <version>2.2.12</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.auth.authhandler</artifactId>
+    <version>5.6.16</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.auth.cert</artifactId>
+    <version>0.0.14</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.auth.oauth</artifactId>
+    <version>1.0.24</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.auth.saml</artifactId>
+    <version>0.2.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.auth.sso</artifactId>
+    <version>0.0.24</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.bundles.hc.impl</artifactId>
+    <version>1.0.4-CQ600-B0001</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.cloudsettings.core</artifactId>
+    <version>1.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.comments</artifactId>
+    <version>1.0.12</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.contexthub.commons</artifactId>
+    <version>0.0.20</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.crx-explorer</artifactId>
+    <version>1.0.18</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.crx-packagemgr</artifactId>
+    <version>1.0.46</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.crxde-lite</artifactId>
+    <version>1.0.66</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.crxde-support</artifactId>
+    <version>2.5.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.crypto</artifactId>
+    <version>3.0.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.frags.impl</artifactId>
+    <version>0.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.gibson</artifactId>
+    <version>1.1.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.httpcache.core</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.i18n</artifactId>
+    <version>5.5.12</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.installer.factory.packages</artifactId>
+    <version>0.5.10</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.jcrclustersupport</artifactId>
+    <version>0.7.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.jmx</artifactId>
+    <version>0.3.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.license</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.logging</artifactId>
+    <version>1.0.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.maintenance.core</artifactId>
+    <version>1.1.18</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.maintenance.oak</artifactId>
+    <version>1.0.0-CQ600-B0001</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.monitoring.core</artifactId>
+    <version>0.3.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.oauth.jwt</artifactId>
+    <version>0.0.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.oauth.server</artifactId>
+    <version>0.0.10-CQ600-B0001</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.ocs.api</artifactId>
+    <version>1.0.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.ocs.core</artifactId>
+    <version>1.0.20</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.ocs.provider.aws</artifactId>
+    <version>1.0.12-CQ600-B0001</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.offloading.core</artifactId>
+    <version>1.0.16</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.offloading.workflow</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.optout</artifactId>
+    <version>0.0.10</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.packages.hc.impl</artifactId>
+    <version>1.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.poi</artifactId>
+    <version>1.1.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.queries</artifactId>
+    <version>1.0.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.references.core</artifactId>
+    <version>1.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.replication.core</artifactId>
+    <version>5.16.20</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.replication.hc.impl</artifactId>
+    <version>1.0.2-CQ600-B0001</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.repository</artifactId>
+    <version>0.6.126</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.repository.checker</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.repository.hc.impl</artifactId>
+    <version>1.0.6-CQ600-B0001</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.requests.logging</artifactId>
+    <version>1.0.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.resourceresolverhelper</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.scribe</artifactId>
+    <version>1.3.5.B002</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.security.user</artifactId>
+    <version>0.1.36</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.sightly.engine</artifactId>
+    <version>1.1.52</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.sightly.js.provider</artifactId>
+    <version>1.0.16-CQ600-B0003</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.socialgraph</artifactId>
+    <version>0.0.18</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.startup</artifactId>
+    <version>0.6.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.tagsoup</artifactId>
+    <version>1.2.1</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.taskmanagement.api</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.taskmanagement.core</artifactId>
+    <version>1.0.18</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.taskmanagement.workflow</artifactId>
+    <version>1.0.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.timeline</artifactId>
+    <version>1.0.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.translation.api</artifactId>
+    <version>1.0.20</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.translation.connector.msft.core</artifactId>
+    <version>1.0.24</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.translation.core</artifactId>
+    <version>1.0.28</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.ui.commons</artifactId>
+    <version>5.5.154</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.webconsole.plugins</artifactId>
+    <version>1.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.workflow.api</artifactId>
+    <version>1.0.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.workflow.console</artifactId>
+    <version>1.0.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.workflow.core</artifactId>
+    <version>1.0.68-CQ600-B0001</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>com.adobe.granite.xssprotection</artifactId>
+    <version>5.5.48</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite</groupId>
+    <artifactId>crx-auth-token</artifactId>
+    <version>2.5.18</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.granite.bundles</groupId>
+    <artifactId>json</artifactId>
+    <version>20090211_1</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.livecycle.formsportal</groupId>
+    <artifactId>adobe-formsportal-services</artifactId>
+    <version>3.0.42</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.pdf</groupId>
+    <artifactId>pdfcore</artifactId>
+    <version>3.0.550899</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.pdf</groupId>
+    <artifactId>pdfencryption_high</artifactId>
+    <version>3.0.550899</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.pdf</groupId>
+    <artifactId>pdfservices_extraction</artifactId>
+    <version>3.0.550899</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.pdf</groupId>
+    <artifactId>pdfservices_manipulation</artifactId>
+    <version>3.0.526742</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.suitetech</groupId>
+    <artifactId>com.adobe.suitetech.nativecomm</artifactId>
+    <version>2.0.8</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.xmp</groupId>
+    <artifactId>core</artifactId>
+    <version>1.0.1</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.xmp</groupId>
+    <artifactId>xmpcore</artifactId>
+    <version>5.0.20</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.xmp.schema</groupId>
+    <artifactId>model</artifactId>
+    <version>1.0.9</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.xmp.schema</groupId>
+    <artifactId>rngparser</artifactId>
+    <version>1.0.7</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.xmp.schema</groupId>
+    <artifactId>service</artifactId>
+    <version>2.0.0</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.adobe.xmp.worker</groupId>
+    <artifactId>files.host</artifactId>
+    <version>1.0.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.adobe.xmp.worker</groupId>
+    <artifactId>files.native.fragment</artifactId>
+    <version>1.0.4</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.day.commons</groupId>
+    <artifactId>day-commons-diff</artifactId>
+    <version>1.1.3</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.commons</groupId>
+    <artifactId>day-commons-durbo</artifactId>
+    <version>2.1.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.commons</groupId>
+    <artifactId>day-commons-gfx</artifactId>
+    <version>2.1.28</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.commons</groupId>
+    <artifactId>day-commons-io</artifactId>
+    <version>1.1.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.commons</groupId>
+    <artifactId>day-commons-jrawio</artifactId>
+    <version>1.5.0.006</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.commons</groupId>
+    <artifactId>day-commons-jstl</artifactId>
+    <version>1.1.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.commons</groupId>
+    <artifactId>day-commons-misc</artifactId>
+    <version>1.1.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.commons</groupId>
+    <artifactId>day-commons-text</artifactId>
+    <version>1.1.10</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.commons</groupId>
+    <artifactId>day.commons.datasource.jdbcpool</artifactId>
+    <version>1.0.24</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.commons</groupId>
+    <artifactId>day.commons.datasource.poolservice</artifactId>
+    <version>1.0.10</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.day.commons.osgi.wrapper</groupId>
+    <artifactId>com.day.commons.osgi.wrapper.commons-email</artifactId>
+    <version>1.2.0-0002</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.commons.osgi.wrapper</groupId>
+    <artifactId>com.day.commons.osgi.wrapper.commons-httpclient</artifactId>
+    <version>3.1.0.018</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.commons.osgi.wrapper</groupId>
+    <artifactId>com.day.commons.osgi.wrapper.commons-lang2</artifactId>
+    <version>2.5-0001</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.commons.osgi.wrapper</groupId>
+    <artifactId>com.day.commons.osgi.wrapper.fop</artifactId>
+    <version>1.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.commons.osgi.wrapper</groupId>
+    <artifactId>com.day.commons.osgi.wrapper.simple-jndi</artifactId>
+    <version>0.11.14.1.0010</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.commons.osgi.wrapper</groupId>
+    <artifactId>com.day.commons.osgi.wrapper.joda-time</artifactId>
+    <version>1.6-0002</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-activitystreams-api</artifactId>
+    <version>5.6.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-activitystreams-core</artifactId>
+    <version>5.7.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-analytics</artifactId>
+    <version>5.7.58</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-apns-client</artifactId>
+    <version>0.1.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-apns-core</artifactId>
+    <version>5.4.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-audit</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-chart</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-commons</artifactId>
+    <version>5.7.12</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-compat-codeupgrade</artifactId>
+    <version>1.3.12</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-compat-commons-auth</artifactId>
+    <version>0.1.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-compat-configupdate</artifactId>
+    <version>0.2.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-compat-runmode</artifactId>
+    <version>0.2.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-connector</artifactId>
+    <version>5.4.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-content-sync</artifactId>
+    <version>5.7.16</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-jobs-core</artifactId>
+    <version>5.4.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-licensebranding</artifactId>
+    <version>6.1.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-mailer</artifactId>
+    <version>5.8.12</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-notifcation-api</artifactId>
+    <version>5.5.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-notifcation-impl</artifactId>
+    <version>5.6.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-opensocial</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-personalization</artifactId>
+    <version>5.7.24</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-pinauthhandler</artifactId>
+    <version>1.1.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-polling-importer</artifactId>
+    <version>5.7.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-replication-audit</artifactId>
+    <version>5.4.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-reporting</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-retriever</artifactId>
+    <version>5.6.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-rewriter</artifactId>
+    <version>5.7.18</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-search</artifactId>
+    <version>5.7.14</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-search-suggest</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-searchpromote</artifactId>
+    <version>5.7.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-searchpromote-geometrixx</artifactId>
+    <version>1.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-security</artifactId>
+    <version>5.7.14</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-security-api</artifactId>
+    <version>5.6.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-spellchecker</artifactId>
+    <version>5.6.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-statistics</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-tagging</artifactId>
+    <version>5.7.18</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-upgrades-executor</artifactId>
+    <version>1.2.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq</groupId>
+    <artifactId>cq-widgets-ext</artifactId>
+    <version>5.5.0</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.day.cq.dam</groupId>
+    <artifactId>adobe-xmp</artifactId>
+    <version>5.6.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.dam</groupId>
+    <artifactId>cq-dam-api</artifactId>
+    <version>5.7.86</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.dam</groupId>
+    <artifactId>cq-dam-commons</artifactId>
+    <version>5.7.84</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.dam</groupId>
+    <artifactId>cq-dam-core</artifactId>
+    <version>5.7.162</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.dam</groupId>
+    <artifactId>cq-dam-handler</artifactId>
+    <version>5.7.32</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.dam</groupId>
+    <artifactId>cq-dam-indesign</artifactId>
+    <version>5.7.30</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.dam</groupId>
+    <artifactId>cq-dam-pim</artifactId>
+    <version>0.0.22</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.dam</groupId>
+    <artifactId>cq-dam-s7dam</artifactId>
+    <version>5.7.126</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.dam</groupId>
+    <artifactId>cq-dam-scene7</artifactId>
+    <version>5.7.16</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.dam</groupId>
+    <artifactId>cq-dam-video</artifactId>
+    <version>5.7.16</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.dam</groupId>
+    <artifactId>cq-dam-word</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.day.cq.dam.commons</groupId>
+    <artifactId>com.day.cq.dam.commons.nekohtml</artifactId>
+    <version>0.9.5-0005</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.day.cq.mcm</groupId>
+    <artifactId>cq-mcm-campaign</artifactId>
+    <version>0.3.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.mcm</groupId>
+    <artifactId>cq-mcm-core</artifactId>
+    <version>5.8.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.mcm</groupId>
+    <artifactId>cq-mcm-emailprovider</artifactId>
+    <version>1.1.10</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.mcm</groupId>
+    <artifactId>cq-mcm-exacttarget-integration</artifactId>
+    <version>1.1.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.mcm</groupId>
+    <artifactId>cq-mcm-landingpage</artifactId>
+    <version>1.1.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.mcm</groupId>
+    <artifactId>cq-mcm-salesforce</artifactId>
+    <version>1.1.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.mcm</groupId>
+    <artifactId>cq-mcm-silverpop-integration</artifactId>
+    <version>1.1.6</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-msm-api</artifactId>
+    <version>5.7.10</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-msm-commons</artifactId>
+    <version>1.0.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-msm-core</artifactId>
+    <version>5.7.90</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-api</artifactId>
+    <version>5.8.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-commons</artifactId>
+    <version>5.7.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-content-sync</artifactId>
+    <version>5.7.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-core</artifactId>
+    <version>5.7.168</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-designimporter</artifactId>
+    <version>1.1.20</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-emulator</artifactId>
+    <version>5.6.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-foundation</artifactId>
+    <version>5.7.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-mobile-api</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-mobile-core</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-mobile-phonegap-build-integration</artifactId>
+    <version>5.7.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-mobile-qrcode</artifactId>
+    <version>5.6.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-notification</artifactId>
+    <version>5.7.14</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-offline</artifactId>
+    <version>5.7.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-resource-details</artifactId>
+    <version>0.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-siteimporter</artifactId>
+    <version>5.7.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-taglib</artifactId>
+    <version>5.7.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-translation</artifactId>
+    <version>1.0.26</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-undo</artifactId>
+    <version>5.6.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-webservice-support</artifactId>
+    <version>5.7.16</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-workflow</artifactId>
+    <version>5.7.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.wcm</groupId>
+    <artifactId>cq-wcm-workflow-api</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.day.cq.workflow</groupId>
+    <artifactId>cq-workflow-api</artifactId>
+    <version>5.6.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.workflow</groupId>
+    <artifactId>cq-workflow-console</artifactId>
+    <version>5.7.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>com.day.cq.workflow</groupId>
+    <artifactId>cq-workflow-impl</artifactId>
+    <version>5.7.8</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.day.crx</groupId>
+    <artifactId>crx-api</artifactId>
+    <version>2.5.26</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.day.jcr.vault</groupId>
+    <artifactId>com.day.jcr.vault</artifactId>
+    <version>2.5.6</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>
+    <version>15.0</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>com.spatial4j</groupId>
+    <artifactId>spatial4j</artifactId>
+    <version>0.3</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>commons-cli</groupId>
+    <artifactId>commons-cli</artifactId>
+    <version>1.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>commons-codec</groupId>
+    <artifactId>commons-codec</artifactId>
+    <version>1.5</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>commons-collections</groupId>
+    <artifactId>commons-collections</artifactId>
+    <version>3.2.1</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>commons-fileupload</groupId>
+    <artifactId>commons-fileupload</artifactId>
+    <version>1.3.1</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.4</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>mail</artifactId>
+    <version>1.5.0-b01</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.abdera</groupId>
+    <artifactId>abdera-client</artifactId>
+    <version>1.0-R783018</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.abdera</groupId>
+    <artifactId>abdera-core</artifactId>
+    <version>1.0-R783018</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.abdera</groupId>
+    <artifactId>abdera-extensions-media</artifactId>
+    <version>1.0-R783018</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.abdera</groupId>
+    <artifactId>abdera-extensions-opensearch</artifactId>
+    <version>1.0-R783018</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.abdera</groupId>
+    <artifactId>abdera-i18n</artifactId>
+    <version>1.0-R783018</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.abdera</groupId>
+    <artifactId>abdera-parser</artifactId>
+    <version>1.0-R783018</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.abdera</groupId>
+    <artifactId>abdera-server</artifactId>
+    <version>1.0-R783018</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.aries</groupId>
+    <artifactId>org.apache.aries.util</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.aries.jmx</groupId>
+    <artifactId>org.apache.aries.jmx.api</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.aries.jmx</groupId>
+    <artifactId>org.apache.aries.jmx.core</artifactId>
+    <version>1.0.1</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.aries.jmx</groupId>
+    <artifactId>org.apache.aries.jmx.whiteboard</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.aries.transaction</groupId>
+    <artifactId>org.apache.aries.transaction.manager</artifactId>
+    <version>1.0.1</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.avalon.framework</groupId>
+    <artifactId>avalon-framework-api</artifactId>
+    <version>4.3.1</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.avalon.framework</groupId>
+    <artifactId>avalon-framework-impl</artifactId>
+    <version>4.3.1</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.avalon.logkit</groupId>
+    <artifactId>avalon-logkit</artifactId>
+    <version>2.2.1</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.cocoon</groupId>
+    <artifactId>cocoon-xml</artifactId>
+    <version>2.0.2</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-compress</artifactId>
+    <version>1.4.1-withoutxz</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-exec</artifactId>
+    <version>1.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-imaging</artifactId>
+    <version>1.0-R1480221</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.0.1</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-math</artifactId>
+    <version>2.2</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.configadmin</artifactId>
+    <version>1.8.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.eventadmin</artifactId>
+    <version>1.3.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.http.api</artifactId>
+    <version>2.3.0-R1570612</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.http.jetty</artifactId>
+    <version>2.3.0-R1579739</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.http.servlet-api</artifactId>
+    <version>0.0.1-R1570612</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.http.sslfilter</artifactId>
+    <version>0.0.1-R1394715</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.http.whiteboard</artifactId>
+    <version>2.2.1-R1239578</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.inventory</artifactId>
+    <version>1.0.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.jaas</artifactId>
+    <version>0.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.metatype</artifactId>
+    <version>1.0.10</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.prefs</artifactId>
+    <version>1.0.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.scr</artifactId>
+    <version>1.8.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.webconsole</artifactId>
+    <version>4.2.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.webconsole.plugins.ds</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.webconsole.plugins.event</artifactId>
+    <version>1.1.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.webconsole.plugins.memoryusage</artifactId>
+    <version>1.0.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.felix</groupId>
+    <artifactId>org.apache.felix.webconsole.plugins.packageadmin</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>httpclient</artifactId>
+    <version>4.3.3</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>httpcore</artifactId>
+    <version>4.3.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>httpmime</artifactId>
+    <version>4.3.3</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>jackrabbit-api</artifactId>
+    <version>2.8.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>jackrabbit-data</artifactId>
+    <version>2.8.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>jackrabbit-jcr-commons</artifactId>
+    <version>2.8.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>jackrabbit-jcr-rmi</artifactId>
+    <version>2.8.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>jackrabbit-jcr-server</artifactId>
+    <version>2.6.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>jackrabbit-spi</artifactId>
+    <version>2.8.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>jackrabbit-spi-commons</artifactId>
+    <version>2.8.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>jackrabbit-webdav</artifactId>
+    <version>2.8.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>oak-auth-external</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>oak-auth-ldap</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>oak-blob</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>oak-commons</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>oak-core</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>oak-lucene</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>oak-mk-api</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>oak-solr-core</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>oak-solr-osgi</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.jackrabbit.vault</groupId>
+    <artifactId>org.apache.jackrabbit.vault</artifactId>
+    <version>3.1.6</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.oltu.commons</groupId>
+    <artifactId>org.apache.oltu.commons.encodedtoken</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.oltu.commons</groupId>
+    <artifactId>org.apache.oltu.commons.json</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.oltu.jose</groupId>
+    <artifactId>org.apache.oltu.jose.jws</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.oltu.oauth2</groupId>
+    <artifactId>org.apache.oltu.oauth2.authzserver</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.oltu.oauth2</groupId>
+    <artifactId>org.apache.oltu.oauth2.common</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.oltu.oauth2</groupId>
+    <artifactId>org.apache.oltu.oauth2.jwt</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.oltu.oauth2</groupId>
+    <artifactId>org.apache.oltu.oauth2.resourceserver</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.sanselan</groupId>
+    <artifactId>sanselan</artifactId>
+    <version>0.97-incubator</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.adapter</artifactId>
+    <version>2.1.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.api</artifactId>
+    <version>2.7.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.atom.taglib</artifactId>
+    <version>0.9.0-R988585</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.auth.core</artifactId>
+    <version>1.1.7-R1584705</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.bgservlets</artifactId>
+    <version>0.0.1-R1582230</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.bundleresource.impl</artifactId>
+    <version>2.2.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.commons.classloader</artifactId>
+    <version>1.3.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.commons.compiler</artifactId>
+    <version>2.1.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.commons.html</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.commons.json</artifactId>
+    <version>2.0.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.commons.log</artifactId>
+    <version>4.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.commons.logservice</artifactId>
+    <version>1.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.commons.mime</artifactId>
+    <version>2.1.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.commons.osgi</artifactId>
+    <version>2.2.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.commons.scheduler</artifactId>
+    <version>2.4.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.commons.threads</artifactId>
+    <version>3.2.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.discovery.api</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.discovery.impl</artifactId>
+    <version>1.0.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.discovery.support</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.engine</artifactId>
+    <version>2.3.3-R1588174</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.event</artifactId>
+    <version>3.3.10</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.extensions.threaddump</artifactId>
+    <version>0.2.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.extensions.webconsolesecurityprovider</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.featureflags</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.fragment.ws</artifactId>
+    <version>1.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.fragment.xml</artifactId>
+    <version>1.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.hc.core</artifactId>
+    <version>1.1.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.hc.webconsole</artifactId>
+    <version>1.1.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.i18n</artifactId>
+    <version>2.2.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.installer.console</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.installer.core</artifactId>
+    <version>3.5.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.installer.factory.configuration</artifactId>
+    <version>1.0.12</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.installer.provider.file</artifactId>
+    <version>1.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.installer.provider.jcr</artifactId>
+    <version>3.1.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.javax.activation</artifactId>
+    <version>0.1.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.jcr.api</artifactId>
+    <version>2.2.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.jcr.base</artifactId>
+    <version>2.2.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.jcr.classloader</artifactId>
+    <version>3.2.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.jcr.compiler</artifactId>
+    <version>2.1.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.jcr.contentloader</artifactId>
+    <version>2.1.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.jcr.davex</artifactId>
+    <version>1.2.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.jcr.jcr-wrapper</artifactId>
+    <version>2.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.jcr.registration</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.jcr.resource</artifactId>
+    <version>2.3.7-R1591843</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.jcr.resourcesecurity</artifactId>
+    <version>0.0.1-R1562502</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.jcr.webdav</artifactId>
+    <version>2.2.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.jmx.provider</artifactId>
+    <version>1.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.launchpad.installer</artifactId>
+    <version>1.2.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.models.api</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.models.impl</artifactId>
+    <version>1.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.resource.inventory</artifactId>
+    <version>1.0.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.resourceaccesssecurity</artifactId>
+    <version>0.0.1-R1579485</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.resourcecollection</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.resourcemerger</artifactId>
+    <version>1.1.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.resourceresolver</artifactId>
+    <version>1.1.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.rewriter</artifactId>
+    <version>1.0.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.scripting.api</artifactId>
+    <version>2.1.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.scripting.core</artifactId>
+    <version>2.0.26</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.scripting.java</artifactId>
+    <version>2.0.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.scripting.javascript</artifactId>
+    <version>2.0.13-R1566989</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.scripting.jsp</artifactId>
+    <version>2.0.28</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.scripting.jsp.taglib</artifactId>
+    <version>2.2.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.scripting.jst</artifactId>
+    <version>2.0.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.security</artifactId>
+    <version>1.0.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.serviceusermapper</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.servlets.compat</artifactId>
+    <version>1.0.0-Revision1200172</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.servlets.get</artifactId>
+    <version>2.1.8</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.servlets.post</artifactId>
+    <version>2.3.4</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.servlets.resolver</artifactId>
+    <version>2.3.2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.settings</artifactId>
+    <version>1.3.0</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.startupfilter</artifactId>
+    <version>0.0.1-Rev1526908</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.startupfilter.disabler</artifactId>
+    <version>0.0.1-Rev1387008</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.sling</groupId>
+    <artifactId>org.apache.sling.tenant</artifactId>
+    <version>1.0.0</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.tika</groupId>
+    <artifactId>tika-core</artifactId>
+    <version>1.5</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.tika</groupId>
+    <artifactId>tika-parsers</artifactId>
+    <version>1.5</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.ws.commons</groupId>
+    <artifactId>ws-commons-util</artifactId>
+    <version>1.0.1</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.apache.xmlrpc</groupId>
+    <artifactId>xmlrpc-client</artifactId>
+    <version>3.1</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.apache.xmlrpc</groupId>
+    <artifactId>xmlrpc-common</artifactId>
+    <version>3.1</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.kohsuke.rngom</groupId>
+    <artifactId>rngom</artifactId>
+    <version>20120531</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.noggit</groupId>
+    <artifactId>noggit</artifactId>
+    <version>0.5</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.owasp.antisamy</groupId>
+    <artifactId>antisamy</artifactId>
+    <version>1.5.2</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.owasp.esapi</groupId>
+    <artifactId>esapi</artifactId>
+    <version>2.0.1</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.scribe</groupId>
+    <artifactId>scribe</artifactId>
+    <version>1.3.5</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>jcl-over-slf4j</artifactId>
+    <version>1.7.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>log4j-over-slf4j</artifactId>
+    <version>1.7.6</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>1.7.6</version>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>rome</groupId>
+    <artifactId>rome</artifactId>
+    <version>1.0RC2</version>
+    <scope>provided</scope>
+</dependency>
+<dependency>
+    <groupId>rome</groupId>
+    <artifactId>rome-fetcher</artifactId>
+    <version>1.0RC2</version>
+    <scope>provided</scope>
+</dependency>
+
+
+
+-------------------------------------------------
+Java Code - quick and dirty to get the job done
+-------------------------------------------------
+Manual editing is required to remove duplicates and also replace Maven variables (${..}) with actual values.
+
+
+package org.example;
+
+import java.io.File;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.filefilter.FileFilterUtils;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+public class GetDeps {
+    private static final List<Dependency> deps = new ArrayList<Dependency>();
+
+    /*
+     * Get all bundle.jar files.
+     */
+    public static void main(String[] args) throws Exception {
+        if (args.length != 1) {
+            throw new IllegalArgumentException("Please specify the felix directory. Usually this is crx-quickstart/launchpad/felix.");
+        }
+        File rootFolder = new File(args[0]);
+        if (rootFolder.exists() && rootFolder.isDirectory() && rootFolder.canRead()) {
+            Collection<File> bundles = FileUtils.listFiles(rootFolder, FileFilterUtils.nameFileFilter("bundle.jar"), FileFilterUtils.directoryFileFilter());
+            for (File bundle : bundles) {
+                processBundle(bundle);
+            }
+            Collections.sort(deps);
+            System.out.println("**********************************************************************");
+            for (Dependency dep : deps) {
+                System.out.println(dep);
+            }
+        } else {
+            throw new IllegalArgumentException("The provided argument either does not exist or is not a folder or cannot be accessed.");
+        }
+    }
+
+    /*
+     * Extract the pom.xml from each bundle
+     */
+    private static void processBundle(File bundle) throws Exception {
+        ZipFile zip = new ZipFile(bundle);
+        Enumeration<? extends ZipEntry> entries = zip.entries();
+        while (entries.hasMoreElements()) {
+            ZipEntry entry = entries.nextElement();
+            if (entry.getName().startsWith("META-INF/maven") && entry.getName().endsWith("pom.xml")) {
+                InputStream pom = zip.getInputStream(entry);
+                parsePom(pom, bundle);
+            }
+        }
+    }
+
+    /*
+     * Parse the pom.xml for groupId, artifactId, version
+     */
+    private static void parsePom(InputStream stream, File bundle) throws Exception {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        Document doc = builder.parse(stream);
+        Element root = doc.getDocumentElement();
+        NodeList nodes = root.getChildNodes();
+        Node parent = null;
+        Node groupId = null;
+        Node artifactId = null;
+        Node version = null;
+        for (int i = 0; i < nodes.getLength(); i++) {
+            Node node = nodes.item(i);
+            if (node.getNodeName().equals("groupId")) {
+                groupId = node;
+            } else if (node.getNodeName().equals("artifactId")) {
+                artifactId = node;
+            } else if (node.getNodeName().equals("version")) {
+                version = node;
+            } else if (node.getNodeName().equals("parent")) {
+                parent = node;
+            }
+        }
+        if ((groupId == null || version == null) && parent != null) {
+            nodes = parent.getChildNodes();
+            for (int i = 0; i < nodes.getLength(); i++) {
+                Node node = nodes.item(i);
+                if (node.getNodeName().equals("groupId") && groupId == null) {
+                    groupId = node;
+                } else if (node.getNodeName().equals("version") && version == null) {
+                    version = node;
+                }
+            }
+        }
+        deps.add(new Dependency(groupId, artifactId, version, bundle.getAbsolutePath()));
+    }
+
+}
+
+class Dependency implements Comparable<Dependency> {
+    private final Node group;
+    private final Node artifact;
+    private final Node version;
+    private final String bundlePath;
+
+    public Dependency(Node _group, Node _artifact, Node _version, String _bundlePath) {
+        group = _group;
+        artifact = _artifact;
+        version = _version;
+        bundlePath = _bundlePath;
+    }
+
+    public Node getGroup() {
+        return group;
+    }
+
+    public Node getArtifact() {
+        return artifact;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("<dependency>\n");
+        sb.append("    <groupId>").append(group.getTextContent()).append("</groupId>\n");
+        sb.append("    <artifactId>").append(artifact.getTextContent()).append("</artifactId>");
+        if(artifact.getTextContent().contains("${")) {
+            sb.append("     ************************************************************** ").append(bundlePath);
+        }
+        sb.append("\n");
+        sb.append("    <version>").append(version.getTextContent()).append("</version>");
+        if(version.getTextContent().contains("${")) {
+            sb.append("     ************************************************************** ").append(bundlePath);
+        }
+        sb.append("\n");
+        sb.append("    <scope>provided</scope>\n");
+        return sb.append("</dependency>\n").toString();
+    }
+
+    public int compareTo(Dependency dep) {
+        int result = group.getTextContent().compareTo(dep.getGroup().getTextContent());
+        if(result == 0) {
+            return artifact.getTextContent().compareTo(dep.getArtifact().getTextContent());
+        } else {
+            return result;
+        }
+    }
+}
+
+c) Use the Eclipse AEM tools to generate a project with minimal requirements (this list will
+   not be complete). More info at http://docs.adobe.com/content/docs/en/dev-tools/aem-eclipse.html.
+
+d) Use a Maven archetype to create an AEM6 project with minimal requirements (again not all
+   dependencies will be included). More info at http://docs.adobe.com/docs/en/aem/6-0/develop/how-tos/ht-projects-maven.html.
