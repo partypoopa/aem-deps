@@ -18,6 +18,8 @@ a) Use a single dependency that will include other dependencies through transiti
 b) Include the Maven dependencies for each bundle that comes with AEM6 OOTB explicitly.
    * At the end one can find some quick&dirty Java code to generate such a list.
 
+<code>
+
 <dependency>
     <groupId>com.adobe.aemds.formsmanager</groupId>
     <artifactId>adobe-aemds-formsanddocuments-core</artifactId>
@@ -2470,7 +2472,7 @@ b) Include the Maven dependencies for each bundle that comes with AEM6 OOTB expl
     <scope>provided</scope>
 </dependency>
 
-
+</code>
 
 -------------------------------------------------
 Java Code - quick and dirty to get the job done
