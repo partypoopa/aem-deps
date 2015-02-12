@@ -16,7 +16,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 public class GetDeps {
-    private static final List<Dependency> deps = new ArrayList<Dependency>();
+    private static final List deps = new ArrayList();
 
     /*
      * Get all bundle.jar files.
@@ -27,13 +27,19 @@ public class GetDeps {
         }
         File rootFolder = new File(args[0]);
         if (rootFolder.exists() && rootFolder.isDirectory() && rootFolder.canRead()) {
-            Collection<File> bundles = FileUtils.listFiles(rootFolder, FileFilterUtils.nameFileFilter("bundle.jar"), FileFilterUtils.directoryFileFilter());
-            for (File bundle : bundles) {
+            Collection bundles = FileUtils.listFiles(rootFolder, FileFilterUtils.nameFileFilter("bundle.jar"), FileFilterUtils.directoryFileFilter());
+
+            Iterator it = bundles.iterator();
+            while (it.hasNext()) {
+                File bundle = (File) it.next();
                 processBundle(bundle);
             }
             Collections.sort(deps);
             System.out.println("**********************************************************************");
-            for (Dependency dep : deps) {
+
+            it = deps.iterator();
+            while (it.hasNext()) {
+                Dependency dep = (Dependency) it.next();
                 System.out.println(dep);
             }
         } else {
@@ -46,9 +52,9 @@ public class GetDeps {
      */
     private static void processBundle(File bundle) throws Exception {
         ZipFile zip = new ZipFile(bundle);
-        Enumeration<? extends ZipEntry> entries = zip.entries();
+        Enumeration entries = zip.entries();
         while (entries.hasMoreElements()) {
-            ZipEntry entry = entries.nextElement();
+            ZipEntry entry = (ZipEntry) entries.nextElement();
             if (entry.getName().startsWith("META-INF/maven") && entry.getName().endsWith("pom.xml")) {
                 InputStream pom = zip.getInputStream(entry);
                 parsePom(pom, bundle);
@@ -97,7 +103,7 @@ public class GetDeps {
 
 }
 
-class Dependency implements Comparable<Dependency> {
+class Dependency implements Comparable {
     private final Node group;
     private final Node artifact;
     private final Node version;
@@ -118,7 +124,6 @@ class Dependency implements Comparable<Dependency> {
         return artifact;
     }
 
-    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("<dependency>\n");
         sb.append("    <groupId>").append(group.getTextContent()).append("</groupId>\n");
@@ -136,7 +141,8 @@ class Dependency implements Comparable<Dependency> {
         return sb.append("</dependency>\n").toString();
     }
 
-    public int compareTo(Dependency dep) {
+    public int compareTo(Object o) {
+        Dependency dep = (Dependency) o;
         int result = group.getTextContent().compareTo(dep.getGroup().getTextContent());
         if (result == 0) {
             return artifact.getTextContent().compareTo(dep.getArtifact().getTextContent());
